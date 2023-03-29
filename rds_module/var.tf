@@ -14,7 +14,7 @@ variable "eks_sec_group_id" {
 }
 
 variable "private_subnet_ids" {
-  type        = string
+  type        = list(string)
   description = "id das privates subnets"
 }
 
