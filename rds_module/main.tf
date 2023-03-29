@@ -22,7 +22,7 @@ resource "aws_security_group" "security_group_db" {
     to_port          = 3306
     protocol         = "tcp"
     # cidr_blocks      = [var.cidr_block]
-    security_groups = var.eks_sec_group_id
+    security_groups = [var.eks_sec_group_id]
   }
   egress {
     from_port        = 0
