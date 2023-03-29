@@ -37,7 +37,7 @@ resource "aws_security_group" "security_group_db" {
 
 resource "aws_db_subnet_group" "subnet_db_group" {
   name       = "subnet_db_rubi_${var.env}"
-  subnet_ids = var.private_subnet_id[0]
+  subnet_ids = var.private_subnet_ids[0]
   tags = {
     Name = "subnet_db_rubi_${var.env}"
   }

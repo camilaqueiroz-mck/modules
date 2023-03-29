@@ -13,7 +13,7 @@ variable "eks_sec_group_id" {
   description = "security group do cluster"
 }
 
-variable "private_subnet_id" {
+variable "private_subnet_ids" {
   type        = string
   description = "id das privates subnets"
 }
