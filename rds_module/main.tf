@@ -24,14 +24,16 @@ resource "aws_security_group" "security_group_db" {
     to_port          = 3306
     protocol         = "tcp"
     # cidr_blocks      = [var.cidr_block]
-    security_groups = [var.eks_sec_group_id]
+    # security_groups = [var.eks_sec_group_id]
+    self = true
   }
   egress {
     description      = "TLS from DB"
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
-    security_groups = [var.eks_sec_group_id]
+    # security_groups = [var.eks_sec_group_id]
+    self = true
   }
   tags = {
     Name = "security_group_db_${var.env}"

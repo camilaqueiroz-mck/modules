@@ -8,10 +8,10 @@ variable "db_password" {
   description = "db password"
 }
 
-variable "eks_sec_group_id" {
-  type        = string
-  description = "security group do cluster"
-}
+# variable "eks_sec_group_id" {
+#   type        = string
+#   description = "security group do cluster"
+# }
 
 variable "private_subnet_ids" {
   type        = list(string)
