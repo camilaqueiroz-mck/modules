@@ -11,7 +11,6 @@ resource "aws_db_instance" "default" {
   db_subnet_group_name = aws_db_subnet_group.subnet_db_group.id
   vpc_security_group_ids = [aws_security_group.security_group_db.id]
   backup_retention_period = "30"
-  performance_insights_enabled = true
 }
 
 resource "aws_security_group" "security_group_db" {
